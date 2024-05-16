@@ -52,7 +52,6 @@ const ModelSelector = () => {
       {selectedModel && (
         <div>
           <h3>Configure {selectedModel.toUpperCase()} Model</h3>
-          {/* Example configuration inputs, adjust as needed for each model */}
           <input
             type="number"
             name="param1"
