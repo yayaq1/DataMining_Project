@@ -1,41 +1,68 @@
-Waleed Saeed -- 21i-1672
-Yahya Qureshi -- 21i-1682
+# Data Mining Project
 
-Data Mining Project:-
+## Team Members
+- **Waleed Saeed** (21i-1672)
+- **Yahya Qureshi** (21i-1682)
 
-----DATA CLEANING----
+## Project Overview
+This project focuses on predicting future data points using various time series and machine learning models. The process involves data cleaning, model configuration, training, and evaluation to find the best fit for the dataset.
 
-Removed Null Values
-Used Data to make a Date Field
+## Data Cleaning
+- **Removed Null Values:** Ensured data integrity by eliminating missing entries.
+- **Created Date Field:** Processed raw data to generate a structured date field.
 
+## Models Implemented
 
-----Models----
+### 1. ARIMA (AutoRegressive Integrated Moving Average)
+- **Purpose:** Predicts future points in a time series using past values.
+- **Process:** 
+  - **ADF Test:** Checks data stability over time.
+  - **ACF & PACF Plots:** Determine ARIMA settings: (p), (d), and (q).
 
-ARIMA Configuration and Tuning
-Purpose: ARIMA is a method for predicting future points in a time series (like stock prices) by using past values.
-Process: Check if the data is stable over time with a test (ADF test). Then, look at special graphs (ACF and PACF) to choose the ARIMA settings: how many past values to use (p), how much to adjust for trends (d), and how many past mistakes to correct (q).
-ANN Design and Training
-Purpose: Artificial Neural Networks (ANNs) can find complex patterns in data that simpler methods might miss.
-Process: Create different ANN designs with various layers and nodes. Train these designs using past data to see which one works best.
-SARIMA (Seasonal ARIMA)
-Purpose: SARIMA is like ARIMA but better for data with regular seasonal patterns (like monthly sales).
-Process: Find the regular ARIMA settings (p, d, q) and also seasonal settings (P, D, Q) by checking the data for patterns and seasonality.
-Exponential Smoothing (ETS)
-Purpose: Exponential Smoothing forecasts future data points by averaging past observations, giving more weight to recent ones.
-Process: Choose the right type of smoothing based on whether the data has trends or seasonal patterns. Fine-tune the model to get the best results.
-Prophet
-Purpose: Prophet is great for predicting data with strong seasonal patterns and special events (like holidays).
-Process: Set up the model with yearly, weekly, and daily patterns and include any holidays. Let Prophet automatically adjust to fit the data.
-Support Vector Regression (SVR)
-Purpose: SVR uses a method to find the best fit for data, even when the relationship is complex.
-Process: Choose the type of SVR (like linear or radial basis) and adjust settings (C and gamma). Test to make sure it works well on new data.
-Long Short-Term Memory (LSTM)
-Purpose: LSTMs are good at predicting sequences (like text or time series) because they remember patterns over time.
-Process: Build an LSTM network with layers and nodes. Train it with sequences of past data and adjust the sequence length.
-Hybrid Models Integration
-Purpose: Combining ARIMA and ANN makes better predictions by using ARIMA to capture simple patterns and ANN to catch complex ones.
-Process: Use ARIMA to make initial forecasts. Then, feed these forecasts into an ANN to correct any errors, improving the overall prediction.
+### 2. ANN (Artificial Neural Networks)
+- **Purpose:** Detects complex patterns in data.
+- **Process:** 
+  - Design various ANN architectures.
+  - Train models to identify the best-performing structure.
 
+### 3. SARIMA (Seasonal ARIMA)
+- **Purpose:** Extends ARIMA for data with seasonal patterns.
+- **Process:** 
+  - Identify regular (p, d, q) and seasonal (P, D, Q) settings.
+  - Adjust based on seasonal patterns.
 
+### 4. Exponential Smoothing (ETS)
+- **Purpose:** Forecasts future points by averaging past observations, emphasizing recent ones.
+- **Process:** 
+  - Select smoothing type based on trends and seasonality.
+  - Fine-tune model for optimal results.
 
+### 5. Prophet
+- **Purpose:** Predicts data with strong seasonal patterns and special events.
+- **Process:** 
+  - Configure model with yearly, weekly, and daily patterns.
+  - Incorporate holidays and allow automatic adjustments.
 
+### 6. Support Vector Regression (SVR)
+- **Purpose:** Fits complex relationships in data.
+- **Process:** 
+  - Choose SVR type (e.g., linear, radial basis).
+  - Adjust settings (C and gamma) for performance validation.
+
+### 7. Long Short-Term Memory (LSTM)
+- **Purpose:** Predicts sequences by remembering patterns over time.
+- **Process:** 
+  - Build LSTM network with multiple layers and nodes.
+  - Train using sequences of past data.
+
+### 8. Hybrid Models Integration
+- **Purpose:** Enhance predictions by combining ARIMA and ANN.
+- **Process:** 
+  - Use ARIMA for initial forecasts.
+  - Feed forecasts into ANN to correct errors.
+
+## Conclusion
+This project demonstrates a comprehensive approach to time series forecasting and data pattern detection using a variety of models. By leveraging both simple and complex models, we aim to achieve high accuracy in predictions.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
